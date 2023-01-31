@@ -1,12 +1,13 @@
 
-# Google Map Api Helper 
+## Google Map Api Helper 
 This library provides for google map api helper function
 
+----------------
+
+## Documentation
 
 
-### Documentation
-
-## Get distance between two lat long
+### Get distance between two lat long
 ```
 import { getDistanceLatLog } from 'google-map-api-helper';
 
@@ -33,7 +34,7 @@ getData()
 
 ```
 
-## Get address by lat long
+### Get address by lat long
 ```
 import { getAddressByLatlng } from 'google-map-api-helper';
 
@@ -56,7 +57,7 @@ const getData = async () => {
 getData()
 
 ```
-## Get address by placeId
+### Get address by placeId
 
 ```
 import { getAddressByPlaceId } from 'google-map-api-helper';
@@ -81,7 +82,7 @@ getData()
 
 ```
 
-## Get Google map Directions
+### Get Google map Directions
 ```
 import { getDirections } from 'google-map-api-helper';
 
@@ -124,7 +125,7 @@ getData()
 
 ```
 
-## Import Default
+### Import Default
 
 ```
 import GMAH from 'google-map-api-helper';

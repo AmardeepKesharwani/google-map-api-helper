@@ -3,17 +3,20 @@ type latLog = {
   lng: number;
 };
 
+
+import axios from 'axios';
+
+
 export const getAddressByPlaceId = (api_key: string, placeId: string) => {
   return new Promise((resolve, reject) => {
-    fetch(
+    axios.get(
       "https://maps.googleapis.com/maps/api/place/details/json?place_id=" +
         placeId +
         "&fields=formatted_address,name,photos&key=" +
         api_key
     )
-      .then((response) => response.json())
-      .then((json) => {
-        resolve(json);
+      .then((res) => {
+        resolve(res.data);
       })
       .catch((err) => {
         reject(err);
@@ -27,7 +30,7 @@ export const getAddressByLatlng = (
   lng: number
 ) => {
   return new Promise((resolve, reject) => {
-    fetch(
+    axios.get(
       "https://maps.googleapis.com/maps/api/geocode/json?latlng=" +
         lat +
         "," +
@@ -35,9 +38,9 @@ export const getAddressByLatlng = (
         "&key" +
         api_key
     )
-      .then((response) => response.json())
-      .then((json) => {
-        resolve(json);
+  
+      .then((res) => {
+        resolve(res.data);
       })
       .catch((err) => {
         reject(err);
@@ -72,10 +75,9 @@ export const getDirections = (api_key: string, data: latLog[]) => {
     let reqURL = `https://maps.googleapis.com/maps/api/directions/json?origin=${origin}&destination=${destination}&${
       waypoint.length > 5 ? "waypoints=" : ""
     }optimize:true:${waypoint}&key=${api_key}`;
-    fetch(reqURL)
-      .then((response) => response.json())
-      .then((json) => {
-        resolve(json);
+    axios.get(reqURL)
+      .then((res) => {
+        resolve(res.data);
       })
       .catch((err) => {
         reject(err);
