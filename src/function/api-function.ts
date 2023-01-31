@@ -35,7 +35,7 @@ export const getAddressByLatlng = (
         lat +
         "," +
         lng +
-        "&key" +
+        "&key=" +
         api_key
     )
   
