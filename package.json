@@ -1,0 +1,29 @@
+{
+  "name": "google-map-api-helper",
+  "version": "1.0.0",
+  "description": "This library provides for google map api helper function",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build":"tsc",
+    "prepare": "npm run build",
+    "dev":"node lib/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AmardeepKesharwani/google-map-api-helper.git"
+  },
+  "keywords": [
+    "google map api",
+    "google map api helper",
+    "geo location"
+  ],
+  "author": "Amardeep kesharwani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AmardeepKesharwani/google-map-api-helper/issues"
+  },
+  "homepage": "https://github.com/AmardeepKesharwani/google-map-api-helper#readme",
+  "files": ["lib/**/*"]
+}
