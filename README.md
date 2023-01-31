@@ -123,3 +123,24 @@ const getData = async () => {
 getData()
 
 ```
+
+## Import Default
+
+```
+import GMAH from 'google-map-api-helper';
+
+GMAH.getDistanceLatLog({lat:26.549394, log:80.5370636}, {lat:26.6418662,log:80.7651918})
+.then(res => console.log(res))
+.catch(error => console.log(error))
+
+GMAH.getAddressByLatlng(map_api_key,26.549394,80.5370636)
+.then(res => console.log(res))
+.catch(error => console.log(error))
+
+GMAH.getAddressByPlaceId(map_api_key,26.549394,80.5370636)
+.then(res => console.log(res))
+.catch(error => console.log(error))
+
+
+
+```
