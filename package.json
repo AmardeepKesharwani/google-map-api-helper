@@ -1,7 +1,7 @@
 {
   "name": "google-map-api-helper",
-  "version": "1.0.2",
-  "description": "This library provides for google map api helper function",
+  "version": "1.0.3",
+  "description": "This library is specially designed to help developer to do some tedious operations on map within a time",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
